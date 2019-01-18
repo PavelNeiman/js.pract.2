@@ -17,14 +17,11 @@ function counter(b){
 
 
 
-// console.log(parseInt(val.value));
 
-document.querySelector('.bValue').onchange = function(){
-    console.log(this.value);
+
+document.querySelector('.bValue').oninput = function(){
     val = this.value;
-    console.log (val)
-
+    btn.addEventListener('click' , counter.bind(this, val ));
 }
 
 
-btn.addEventListener('click' , counter.bind(this, val ));
