@@ -15,7 +15,13 @@ function counter(b){
 }
 
 
-btn.onclick = function(){
-    this.style.backgroundColor = 'red';
-    console.log('ya rabotay')
-}
+// btn.onclick = function(){
+//     this.style.backgroundColor = 'red';
+//     console.log('ya rabotay')
+// }
+
+
+btn.addEventListener('click' , counter.bind(this, parseInt(val.value)));
+
+
+console.log(parseInt(val.value));
