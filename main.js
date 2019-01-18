@@ -1,6 +1,6 @@
 var btn = document.querySelector('input.startBtn');
 var ph = document.querySelector('p');
-var val = document.querySelector('.bValue');
+var val;
 
 
 
@@ -15,13 +15,16 @@ function counter(b){
 }
 
 
-// btn.onclick = function(){
-//     this.style.backgroundColor = 'red';
-//     console.log('ya rabotay')
-// }
 
 
-btn.addEventListener('click' , counter.bind(this, parseInt(val.value)));
+// console.log(parseInt(val.value));
+
+document.querySelector('.bValue').onchange = function(){
+    console.log(this.value);
+    val = this.value;
+    console.log (val)
+
+}
 
 
-console.log(parseInt(val.value));
+btn.addEventListener('click' , counter.bind(this, val ));
