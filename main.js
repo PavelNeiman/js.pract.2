@@ -22,6 +22,9 @@ function counter(b){
 document.querySelector('.bValue').oninput = function(){
     val = this.value;
     btn.addEventListener('click' , counter.bind(this, val ));
+    document.querySelector('p.textp').innerHTML = this.value;
+    val = [];
+    
 }
 
 
